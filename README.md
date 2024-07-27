@@ -1,18 +1,17 @@
-Create evn:
-python3 -m venv <myenvname>
+# Create evn:
+python3 -m venv <myenvname> \n
 <myenvname>\Scripts\activate 
 
-Install:
-pip install flask
-pip install googlesearch-python
-pip install transformers
-pip install torch
-pip install datasets
-pip install pyvi
-pip install pandas
+# Requirements:
+pip install flask \n
+pip install googlesearch-python \n
+pip install transformers \n
+pip install torch \n
+pip install datasets \n
+pip install pyvi \n
+pip install pandas \n
 
-Run:
-# normal run
+# Run:
 flask run
-# debug mode on
+# Debug mode on
 flask run --debug
