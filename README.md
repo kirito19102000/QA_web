@@ -1,6 +1,6 @@
 # Create evn:
-python3 -m venv <myenvname> <br>
-<myenvname>\Scripts\activate 
+python3 -m venv env <br>
+env\Scripts\activate 
 
 # Requirements:
 pip install flask <br>
