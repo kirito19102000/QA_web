@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %} {{Title}} {% endblock %}
+
+{% block content %}
+    <h1>QA online</h1>
+    <form method="POST">
+      <div>
+        <label for="exampleFormControlInput1" class="form-label">Model</label>
+      <select class="form-select" aria-label="Default select example" name="model_select">
+        <option {% if model_select == 'Bert-multilingual' %}selected{% endif %}>Bert-multilingual</option>
+        <option {% if model_select == 'PhoBERT' %}selected{% endif %}>PhoBERT</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Question</label>
+      <input type="text" class="form-control" placeholder="Input your question" name="input_text" required {% if input_text != None %}value="{{ input_text }}"{% endif %}>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  {% if input_text or model_select %}
+      <h2>Answer:</h2>
+      <p>{{answer}}</p>
+    {% endif %}
+
+
+{% endblock %}

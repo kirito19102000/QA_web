@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Form Example</title>
+  </head>
+  <body>
+    <h1>QA</h1>
+    <form method="POST">
+      <select class="form-select" aria-label="Default select example" name="model_select">
+        <option selected>Bert-multilingual</option>
+        <option value="1">PhoBERT</option>
+      </select>
+      <div>
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="text" name="input_text" required value="{{ input_text }}">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% if input_text or model_select %}
+      <h2>Kết quả:</h2>
+      <p>Chuỗi nhập vào: {{ input_text }}</p>
+      <p>Mô hình đã chọn: {{ model_select }}</p>
+    {% endif %}
+  </body>
+</html>
