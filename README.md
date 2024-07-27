@@ -3,7 +3,7 @@ python3 -m venv env <br>
 env\Scripts\activate 
 
 # Requirements:
-pip install numpy == 1.25.2 <br>
+pip install numpy==1.25.2 <br>
 pip install flask <br>
 pip install googlesearch-python <br>
 pip install transformers <br>
